@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-4">
+            <h3>Creer un compte </h3>
+            <form action="" method="POST" novalidate>
+              {% csrf_token %}
+                {% comment %} <div class="form-group">
+                  <label for="exampleInputText1">Prenom</label>
+                  <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputText1">Nom</label>
+                    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="textHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Addresse e-mail</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Nous n'allons jamais partager votre e-mail.</small>
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Mot de passe</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword2">Confirmer le mot de passe</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2">
+                  </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Selectionner</label>
+                </div> {% endcomment %}
+                
+                {{ form.as_p }}
+
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+              </form>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://cdn.pixabay.com/photo/2017/07/27/02/23/space-2543838_960_720.jpg" alt=" create" class="img-fluid img-responsive">
+        </div>
+    </div>
+</div>
+
+{% endblock%}

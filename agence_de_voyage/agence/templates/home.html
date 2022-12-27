@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+
+    <h3 class="mb-3">Bienvenue sur Vabus, reservez vos places en toutes faciliter</h3>
+    {% comment %} <div class="row">
+
+       <div class="col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.IS0L67W9bgbE9x7tl3gUJQAAAA?w=162&h=137&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Agence 1">
+            <div class="card-body">
+              <h5 class="card-title">General Express</h5>
+              <p class="card-text"> Savourons ensemble le plaisir de voyager à des prix battant pour toute concurrence ! General Express Voyages.</p>
+              <a href="visiter" class="btn btn-warning">Visiter</a>
+              <a href="reservations" class="btn btn-success">Reserver</a>
+            </div>
+          </div>
+       </div> 
+
+       <div class="col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.IS0L67W9bgbE9x7tl3gUJQAAAA?w=162&h=137&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Agence 2">
+            <div class="card-body">
+              <h5 class="card-title">Finex</h5>
+              <p class="card-text"> Compagnie de Transport Interurbain des personnes et des marchandises Douala-Yaounde-Douala.</p>
+              <a href="visiter" class="btn btn-warning">Visiter</a>
+              <a href="reservations" class="btn btn-success">Reserver</a>
+            </div>
+          </div>
+       </div>
+
+       <div class="col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.IS0L67W9bgbE9x7tl3gUJQAAAA?w=162&h=137&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Aggencec 3">
+            <div class="card-body">
+              <h5 class="card-title">Touristique</h5>
+              <p class="card-text">Plusieurs départs par jour de Akwa. Tarifs vers Yaoundé : 8 000 FCFA aller-retour. Hôtesses, service boissons et collation à bord.</p>
+              <a href="visiter" class="btn btn-warning">Visiter</a>
+              <a href="reservations" class="btn btn-success">Reserver</a>
+            </div>
+          </div>
+       </div>
+
+    </div> {% endcomment %}
+
+    <div class="card-columns">
+    {% for gestionagence in shelf %}
+  <div class="card" style="with:18em;">
+    <img class="card-img-top" src=" {{crud.picture.url}} " >
+    <div class ="card-body">
+        <h5 class="card-title"> {{gestionagence.name}}</h5>
+        <h6 class="card-text">{{gestionagence.description}}</h6> 
+        <div class="card-footer bg-transparent border-dark">
+            <p class="card-title">{{gestionagence.author}}</p>
+        <center>
+            {% comment %} <a href="update/{{gestionagence.id}}" class="btn btn-primary" id=" {{gestionagence.id}} ">Edit </a>
+            <a href=" delete/{{gestionagence.id}}" class="btn btn-danger" id=" {{gestionagence.id}} ">Delete </a> {% endcomment %}
+            <a href="visiter" class="btn btn-warning">Visiter</a>
+            <a href="reservations" class="btn btn-success">Reserver</a>
+        </center> 
+    </div>
+  </div>
+  </div>
+{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock%} 

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-4">
+            <h3>reservation </h3>
+            <form action="" method="POST" novalidate>
+              {% csrf_token %}
+                
+                {{ Forms.as_p }}
+
+                <button type="submit" class="btn btn-primary">Reserver</button>
+              </form>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://cdn.pixabay.com/photo/2017/07/27/02/23/space-2543838_960_720.jpg" alt=" create" class="img-fluid img-responsive">
+        </div>
+    </div>
+</div>
+
+{% endblock%}

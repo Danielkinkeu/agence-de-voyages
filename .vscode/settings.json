@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "agence_de_voyage"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
