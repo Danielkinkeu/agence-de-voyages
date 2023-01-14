@@ -29,11 +29,30 @@ class UserLoginForm(forms.Form):
     email = forms.EmailField()
     password1 = forms.CharField(max_length = 50)
 
+
+departs=[
+    ('yaounde','yaounde'),
+    ('douala','douala'),
+    ('bafoussam','bafoussam'),
+    ('dschang','dschang'),
+    ('buea','buea'),
+]
+
+arriver=[
+    ('douala','douala'),
+    ('yaounde','yaounde'),
+    ('bafoussam','bafoussam'),
+    ('dschang','dschang'),
+    ('buea','buea'),
+]
+
 class reserveForm(forms.Form):
-    depart = forms.ChoiceField()
-    destination = forms.ChoiceField()
+    depart = forms.ChoiceField( choices=departs)
+    destination = forms.ChoiceField(choices=arriver)
     datedepart = forms.DateField() 
     quantite = forms.IntegerField()
+
+
 
 
 class GestionagenceCreate(forms.ModelForm):
