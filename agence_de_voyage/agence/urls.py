@@ -1,6 +1,7 @@
 from django import views
 from django.urls import path,include
-
+from agence_de_voyage.settings import DEBUG,STATIC_ROOT,MEDIA_ROOT, MEDIA_URL, STATIC_URL
+from django.conf.urls.static import static  
 from gestionagence.views import update, delete
 from .views import *
 from . import views 
@@ -19,3 +20,7 @@ urlpatterns = [
     path('update/<int:gestionagence_id>', update), 
 
 ]  
+
+if DEBUG:
+    urlpatterns += static(STATIC_URL, document_root = STATIC_ROOT)
+    urlpatterns += static(MEDIA_URL, document_root = MEDIA_ROOT)

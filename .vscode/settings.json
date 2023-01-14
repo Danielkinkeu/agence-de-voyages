@@ -3,5 +3,9 @@
         "agence_de_voyage"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "python.analysis.extraPaths": [
+        "./agence_de_voyage/agence_de_voyage",
+        "./agence_de_voyage/agence_de_voyage"
+    ]
 }

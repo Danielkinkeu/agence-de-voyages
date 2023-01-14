@@ -10,6 +10,7 @@ from gestionagence.form import GestionagenceCreate
 from gestionagence.models import Gestionagence
 
 # Create your views here.
+
 def home(request):
     return render(request, 'home.html')
 

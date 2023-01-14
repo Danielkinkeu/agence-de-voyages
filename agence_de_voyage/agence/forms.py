@@ -1,5 +1,6 @@
+import datetime
 from django import forms
-
+from django.contrib.auth.models import User
 from gestionagence.models import Gestionagence 
 # # from .models import agence
 # from django.contrib.auth.forms import UserCreationForm
@@ -14,7 +15,9 @@ from gestionagence.models import Gestionagence
         
     
 
-
+# user = User.objects.create_user('daniel','kinkeufranck@gmail.com','kinkeu')
+# user.last_name = 'kinkeu'
+# user.save()
 class UserRegisterForm(forms.Form):
     firstname = forms.CharField(max_length=50)
     lastname = forms.CharField(max_length = 30)
@@ -29,7 +32,7 @@ class UserLoginForm(forms.Form):
 class reserveForm(forms.Form):
     depart = forms.ChoiceField()
     destination = forms.ChoiceField()
-    datedepart = forms.DateField()
+    datedepart = forms.DateField() 
     quantite = forms.IntegerField()
 
 
