@@ -1,10 +1,11 @@
 {% extends "base.html" %}
-
+{% block title%} Reservation {% endblock %}
 {% block content %}
 
 <div class="container">
     <div class="row mt-5 mb-5 shadow">
         <div class="col-lg-6 shadow p-4">
+            <h1>{{name}}</h1>
             <h3>reservation </h3>
             <form action="" method="POST" novalidate>
               {% csrf_token %}

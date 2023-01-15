@@ -4,7 +4,8 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 # from .forms import UserForm
 from django.contrib import messages
-
+   
+#    super(ModelName, self).save(*args, **kwargs) # Call the real save() method
 from agence.forms import UserRegisterForm, reserveForm
 from gestionagence.form import GestionagenceCreate
 from gestionagence.models import Gestionagence
@@ -18,7 +19,8 @@ def home(request):
 def login(request):
     if request.method == 'POST':
         # form = UserLoginForm()
-        email = request.POST['firstname']
+        email = request.POST['email']
+        print('le mail est :',email)
         password = request.POST['password1']
         user = authenticate(request, email = email, password = password)
         if user is None and user.is_active:

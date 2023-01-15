@@ -1,12 +1,13 @@
-{% extends "base.html" %}
-
+{% comment %} {% extends "base.html" %}
+{% block title%} Connexion {% endblock %}
 {% block content %}
 
 <div class="container">
     <div class="row mt-5 mb-5 shadow">
         <div class="col-lg-6 shadow p-4">
             <h3>Connexion</h3>
-            <form>
+             <form>
+              {% comment %}
                 <div class="form-group">
                   <label for="exampleInputEmail1">Addresse e-mail</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -19,9 +20,11 @@
                 <div class="form-group form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Selectionner</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Connectez</button>
-              </form>
+                </div>{% endcomment %}
+                {{form}}
+                <button type="submit" class="btn btn-primary mt-5">Connectez</button>
+              </form> 
+              
         </div>
         <div class="col-lg-6">
             <img src="https://cdn.pixabay.com/photo/2013/11/15/13/57/road-210913_960_720.jpg" alt=" connect" class="img-fluid img-responsive">
@@ -29,4 +32,4 @@
     </div>
 </div>
 
-{% endblock%}
+{% endblock%} {% endcomment %}

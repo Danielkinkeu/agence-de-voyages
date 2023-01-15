@@ -10,3 +10,10 @@ class Gestionagence(models.Model):
     
     def __str__(self):
         return self.name
+    
+    class UserRegisterForm(models.Model):
+        firstname = models.CharField(max_length=50)
+        lastname = models.CharField(max_length = 30)
+        email = models.EmailField()
+        password1 = models.CharField(max_length = 30)
+        password2 = models.CharField(max_length = 30)

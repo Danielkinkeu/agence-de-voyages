@@ -33,9 +33,15 @@
             <li class="nav-item">
               <a class="nav-link text-white" href="#">Contactez-nous</a>
             </li>
+            {% if user.is_authenticated %}
             <li class="nav-item active ml-5">
-              <a class="nav-link btn btn-success text-white" href="login">Connexion </a>
+              <a class="nav-link btn btn-success text-white" href="{% url 'logout' %}">Deconnexion </a>
             </li>
+            {% else %}
+            <li class="nav-item active ml-5">
+              <a class="nav-link btn btn-success text-white" href="{% url 'login_form' %}">Connexion </a>
+            </li>
+            {% endif %}
             <li class="nav-item active ml-4">
               <a class="nav-link btn btn-info text-white" href=" register ">Creer un compte </a>
             </li>

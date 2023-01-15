@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'agence',
     'gestionagence',
+    'app_auth',
 ]
 
 MIDDLEWARE = [
