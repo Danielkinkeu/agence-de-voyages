@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'agence',
     'gestionagence',
     'app_auth',
+    'reservation',
 ]
 
 MIDDLEWARE = [

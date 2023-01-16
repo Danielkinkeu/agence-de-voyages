@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title%} reservations {% endblock %} 
+{% block content %}
+
+<div class="container">
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-danger text-center mt-5" ><strong> {{message}} </strong></div>
+  {% endfor %}
+  {% endif %}
+
+  <div class="col-md-12">
+    <form method="POST" action="" novalidate> {% csrf_token %}
+      <div class="card">
+        <div class="card-header text-center"><i class="fas fa-user"></i> reservation</div>
+        <div class="card-body">
+            <form action="" method="POST" novalidate>
+                {% csrf_token %}
+                  
+                  {{ upload }}
+  
+                  <button type="submit" class="btn btn-primary">Reserver</button>
+                </form>
+
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary btn-block" >reserver</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<ul>villes traversées
+    <li>Yaoundé</li>
+    <li>Douala</li>
+    <li>Dschang</li>
+    <li>Baffoussam</li>
+    <li>Kribi</li>
+</ul>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

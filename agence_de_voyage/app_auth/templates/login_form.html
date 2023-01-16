@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block title%} Connexion {% endblock %} 
 {% block content %}
 
-<div class="container">
+<div class="container ">
   {% if messages %}
   {% for message in messages %}
   <div class="alert alert-danger text-center mt-5" ><strong> {{message}} </strong></div>
@@ -10,7 +10,7 @@
 
   <div class="col-md-20">
     <form method="POST" action="" novalidate> {% csrf_token %}
-      <div class="card">
+      <div class="card m-20">
         <div class="card-header text-center"><i class="fas fa-user"></i> Connexion</div>
         <div class="card-body">
           <label for="id_username"> Nom d'utilisateur </label>

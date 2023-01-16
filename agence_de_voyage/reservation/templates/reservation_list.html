@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title%} reservations {% endblock %} 
+{% block content %}
+
+<div class="container">
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-danger text-center mt-5" ><strong> {{message}} </strong></div>
+  {% endfor %}
+  {% endif %}
+
+  <div class="col-md-12">
+   
+  </div>
+</div>
+<ul>villes traversées
+    <li>Yaoundé</li>
+    <li>Douala</li>
+    <li>Dschang</li>
+    <li>Baffoussam</li>
+    <li>Kribi</li>
+</ul>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
