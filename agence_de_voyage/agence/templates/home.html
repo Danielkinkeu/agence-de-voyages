@@ -57,7 +57,7 @@
             {% comment %} <a href="update/{{gestionagence.id}}" class="btn btn-primary" id=" {{gestionagence.id}} ">Edit </a>
             <a href=" delete/{{gestionagence.id}}" class="btn btn-danger" id=" {{gestionagence.id}} ">Delete </a> {% endcomment %}
             <a href="visiter" class="btn btn-warning">Visiter</a>
-            <a href="reservations" class="btn btn-success">Reserver</a>
+            <a href="{% url 'reserver_form' %}" class="btn btn-success">Reserver</a>
         </center> 
     </div>
   </div>

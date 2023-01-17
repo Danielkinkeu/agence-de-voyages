@@ -8,17 +8,35 @@
   {% endfor %}
   {% endif %}
 
-  <div class="col-md-12">
-   
+
+  <div class="card-columns">
+    {% for r in reservations %}
+  
+  <div class="card" style="with:18em;">
+    {% comment %} <img class="card-img-top" src=" {{gestionagence.picture.url}} " > {% endcomment %}
+    <p> <strong> {{gestionagence.name}} <strong> </p>
+    <div class ="card-body">
+        <h5 class="card-title"> lieu de depart:  {{r.depart}}</h5>
+        <h6 class="card-text">lieu de destination:   {{r.destination}}</h5> 
+        <div class="card-footer bg-transparent border-dark">
+            <p class="card-title">date de depart:  {{r.datedepart}}</p>
+            <p class="card-title">nombre de place:   {{r.qte}}</p>
+            <center>
+              <a href="{% url 'deleteR' r.id  %}" class="btn btn-danger" id=" {{r.id}} ">Annuler la reservation </a>
+            </center>  
+        {% comment %} <center>
+            {% comment %} <a href="update/{{gestionagence.id}}" class="btn btn-primary" id=" {{gestionagence.id}} ">Edit </a>
+            <a href=" delete/{{gestionagence.id}}" class="btn btn-danger" id=" {{gestionagence.id}} ">Delete </a> 
+            <a href="visiter" class="btn btn-warning">Visiter</a>
+            <a href="reservations" class="btn btn-success">Reserver</a>
+        </center>  {% endcomment %}
+    </div>
   </div>
+  </div>
+
+{% endfor %}
+ </div>
 </div>
-<ul>villes traversées
-    <li>Yaoundé</li>
-    <li>Douala</li>
-    <li>Dschang</li>
-    <li>Baffoussam</li>
-    <li>Kribi</li>
-</ul>
 {% endblock %}
 
 {% block scripts %}

@@ -1,7 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
+# Create your models her
 
-# Create your models here.
-   
+
+from django import forms
 
 departs=[
     ('yaounde','yaounde'),
@@ -19,12 +21,12 @@ arriver=[
     ('buea','buea'),
 ]
 
-class ReservationForm(models.Model):
-    depart = models.CharField(max_length = 30,default="lieu de depart",choices=departs )
+class ReservationCreate(models.Model):
+    depart = models.CharField(max_length = 30,choices=departs )
     destination = models.CharField(max_length = 30,default="lieu de destination",choices=arriver)
-    datedepart = models.DateField(default = "date de depart")
-    qte = models.IntegerField(default = "nombre de place")
-    
-    def __str__(self):
-        return self.depart
+    datedepart = models.DateField()
+    qte = models.IntegerField()
+    user=models.ForeignKey(User,on_delete=models.CASCADE,null=True)
+    # reservation=(depart, destination, datedepart, qte)
+
     

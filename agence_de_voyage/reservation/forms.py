@@ -1,11 +1,9 @@
 from django import forms
-from .models import ReservationForm
 
-class ReservationCreate(forms.ModelForm):
-    
-    class Meta:
-        model = ReservationForm
-        fields = '__all__'
+# class ReservationCreate(forms.ModelForm):
+#         class Meta:
+#          model = ReservationForm
+#          fields = '__all__'
 
 
 departs=[
@@ -24,8 +22,23 @@ arriver=[
     ('buea','buea'),
 ]
 
-class ReservationForm(forms.Form):
-    depart = forms.ChoiceField(label="lieu de depart",choices=departs )
-    destination = forms.ChoiceField(label="lieu de destination",choices=arriver)
-    datedepart = forms.DateField(label = "date de depart" )
-    qte = forms.IntegerField(label = "nombre de place")
+# class ReservationForm(forms.Form):
+#     depart = forms.ChoiceField(label="Lieu de depart",widget=forms.TextInput(attrs={'class': 'form-control'}), choices=departs)
+#     destination = forms.ChoiceField(label="lieu de destination",widget=forms.TextInput(attrs={'class': 'form-control'}), choices=arriver)
+#     datedepart = forms.DateField(label="Date de depart",widget=forms.DateInput(attrs={'class': 'form-control'}))
+#     qte = forms.IntegerField(label="nombre de place",widget=forms.TextInput(attrs={'class': 'form-control'}))
+
+
+from .models import ReservationCreate
+
+class ReservationForm(forms.ModelForm):
+    class Meta:
+        model=ReservationCreate
+        exclude=("user",)
+        widgets={"datedepart":forms.DateInput(attrs={"type":"date",'class': 'form-control'}),
+                 
+                 "depart":forms.Select(attrs={'class': 'form-control'}),
+                 "destination":forms.Select(attrs={'class': 'form-control'}),
+                "qte":forms.NumberInput(attrs={'class': 'form-control'})}
+
+    

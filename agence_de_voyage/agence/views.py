@@ -50,6 +50,9 @@ def reservations(request):
     Forms = reserveForm()
     return render(request, 'reservations.html', {'Forms': Forms})
 
+# def liste(request):
+#     return render(request,'reservation_liste.html')
+
 def visiter(request):
     return render(request, 'visiter.html')
 

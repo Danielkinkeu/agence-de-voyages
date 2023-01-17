@@ -16,9 +16,8 @@
             <form action="" method="POST" novalidate>
                 {% csrf_token %}
                   
-                  {{ upload }}
-  
-                  <button type="submit" class="btn btn-primary">Reserver</button>
+                  {{ upload.as_p }}
+
                 </form>
 
         </div>
@@ -29,13 +28,6 @@
     </form>
   </div>
 </div>
-<ul>villes traversées
-    <li>Yaoundé</li>
-    <li>Douala</li>
-    <li>Dschang</li>
-    <li>Baffoussam</li>
-    <li>Kribi</li>
-</ul>
 {% endblock %}
 
 {% block scripts %}

@@ -11,6 +11,7 @@ urlpatterns = [
     path('login/', login, name="login"),
     path('register/', register, name="register"),
     path('propos/',propos, name="propos"),
+    # path('reservation/liste/',liste, name="liste"),    
     path('reservations/', reservations, name="reservations"),
     path('visiter/', visiter, name="visiter"),
     path('visiter/reservations', reservations, name="reservations"),
