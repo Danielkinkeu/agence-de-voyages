@@ -53,6 +53,9 @@ def reservations(request):
 def visiter(request):
     return render(request, 'visiter.html')
 
+def propos(request):
+    return render(request, 'a_propos.html')
+
 def home(request):
       shelf = Gestionagence.objects.all()
       return render(request, 'home.html', {'shelf': shelf})

@@ -10,6 +10,7 @@ urlpatterns = [
     path('', home, name="home"),
     path('login/', login, name="login"),
     path('register/', register, name="register"),
+    path('propos/',propos, name="propos"),
     path('reservations/', reservations, name="reservations"),
     path('visiter/', visiter, name="visiter"),
     path('visiter/reservations', reservations, name="reservations"),

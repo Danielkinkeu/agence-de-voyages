@@ -1,0 +1,114 @@
+.partA{
+    background-image: url("images/Roadd.jpeg");
+    background-size: cover;
+    height: 700PX;
+}
+
+nav{padding-top:20px ;
+display: flex;
+    justify-content: space-between;
+}
+    nav .slogan span {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(205, 16, 48);
+            padding-right: 10px;
+            margin-right: 80px;
+        }
+
+       nav .nav-center{
+            margin-left: 200PX;
+            justify-content: space-around;
+            padding-right: 50px;
+            padding-top: 0px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        .tete1{
+            background-color:red;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 15px 15px 15px 15px;
+            color: black;
+           margin: 5px;
+            border-radius: 30%;
+        }
+                 .tete2 {
+                     background-color:black;
+                    margin: 5px;
+                     color:white;
+                    padding:15px 15px 15px 15px;
+                     border-radius: 30%;
+                 }
+                 .PartAA{
+                    padding-top:200px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-weight: bold;
+                    color:white;
+                    font-size: 50PX;
+                margin-left: 40px;
+            margin-bottom: 20px;}
+
+
+                    .form{
+                    display: flex;
+                                     }
+              
+   .textt {
+      height:45px ;
+      width: 600PX;
+      margin-left: 40px;
+      margin-right: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 20PX;
+   }
+        .timee {
+            height: 45px;
+            width: 150PX;
+            font-weight: bold;
+            margin-right: 25px;
+                color: black;
+        }
+                .forms_buttons-action{
+            height: 45px;
+                width: 155PX;
+                font-size: 15px;
+                font-weight: bold;
+                margin-right: 25px;
+                color: white;
+                border-radius: 20px;
+                background-color: black;
+        }
+        .PartAB{
+            margin-left: 40px;
+                margin-top: 20px;
+        }
+
+                .PartB {
+                 padding-top: 60px;
+                    
+                    display: flex;
+                        justify-content: space-between;
+                        padding-left: 45px;
+                        padding-right: 45px;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                            font-weight: bold;
+                            font-size: 20PX;
+                }
+         .footer {
+             padding-top: 20px;
+             display: flex;
+             justify-content: space-between;
+             padding-left: 45px;
+             padding-right: 45px;
+             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+             font-weight: bold;
+             font-size: 20PX;
+         }
+         .PartC{
+            background-color: rgb(164, 149, 149);
+           
+            margin-top: 30px;
+         }

@@ -17,3 +17,40 @@ class Gestionagence(models.Model):
         email = models.EmailField()
         password1 = models.CharField(max_length = 30)
         password2 = models.CharField(max_length = 30)
+        
+
+class Bus(models.Model):
+    idBus = models.CharField(max_length=50)
+    typeBus  = models.CharField(max_length = 30, default = 'Yaounde')
+    nombrePlace = models.IntegerField()
+    nombrePlaceDispo = models.IntegerField()
+    
+    def __str__(self):
+        return self.idBus
+    
+    
+class Voyage(models.Model):
+    idVoyage = models.CharField(max_length=50)
+    lieuDepart  = models.CharField(max_length = 30, default = 'Yaounde')
+    lieuArriver = models.CharField(max_length = 30, default = '678963685')
+    heureDepart = models.TimeField()
+    heureArriver = models.TimeField()
+    
+    def __str__(self):
+        return self.idVoyage
+    
+    
+class Quartier(models.Model):
+    idQuartier = models.CharField(max_length=50)
+    nomQuartier  = models.CharField(max_length = 30, default = '')
+    
+    def __str__(self):
+        return self.idQuartier 
+    
+    
+class Ville(models.Model):
+    idVille = models.CharField(max_length=50)
+    nomVille = models.CharField(max_length = 30, default = '')
+    
+    def __str__(self):
+        return self.idVille           
