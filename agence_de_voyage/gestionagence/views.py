@@ -27,6 +27,7 @@ def update(request, gestionagence_id):
         return redirect('index')
     crud_form = GestionagenceCreate(request.POST or None, instance = crud_shelf)
     if crud_form.is_valid():
+        crud_form.save()
         return redirect('index')  
     return render(request, 'upload_form.html', {'upload_form': crud_form})  
  
